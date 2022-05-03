@@ -1,0 +1,577 @@
+/* navigacioni bar */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #102405;
+    font-family: 'Raleway', sans-serif;
+}
+.logo{
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.nav-links a{
+    color: whitesmoke;
+    display: flex;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.nav-links li{
+    list-style: none;
+}
+
+@media screen and (max-width:1000px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width:600px) {
+
+    .nav-links{
+        position: absolute;
+        right: 0;
+        height: 9vh;
+        top: 9vh;
+        background-color: #ffb8037a;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    
+    z-index: 1;
+    display: none;
+}
+.sgn-popup .overlay1 {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0, 0, 0, 0.493);
+    z-index: 1;
+    display: none;
+}
+.popup .content {
+
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 300px;
+    height: 200px;
+    z-index:2;
+    padding: 30px;
+    box-shadow: 0 4px 8px;
+    box-sizing: border-box;
+}
+
+.sgn-popup .sgn-content{
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 400px;
+    z-index:2;
+    padding: 30px;
+    box-shadow: 0 4px 8px;
+    box-sizing: border-box;
+
+}
+.sgn-content .tekst{
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+}
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top:15px;
+    width: 30px;
+    background: rgb(184, 122, 122);
+    color: #fff;
+    font-size:25px;
+    line-height: 30px;
+    text-align:center;
+    font-weight: 600;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sgn-popup .close-btn-sgn{
+    position: absolute;
+    right: 20px;
+    top:15px;
+    width: 30px;
+    background: rgb(184, 122, 122);
+    color: #fff;
+    font-size:25px;
+    line-height: 30px;
+    text-align:center;
+    font-weight: 600;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.popup.active .overlay {
+    display: block;
+}
+.popup.active .content {
+    transform: translate(-50%, -50%) scale(1);
+}
+.sgn-popup.active .overlay {
+    display: block;
+}
+.sgn-popup.active .sgn-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* heder najava */
+body {
+    
+   background-image: url(pozadina1.jpg);
+   
+}
+
+.fikspozadina {
+    width: 100%;
+    height: 300px;
+    background-color: #0000008e;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+.fikspozadina-izuzetak{
+    width: 100%;
+    height: 200px;
+    background-color: #0000008e;
+}
+@media screen and (max-width:600px) {
+    .fikspozadina img {
+        visibility: hidden;
+    }
+    .fikspozadina {
+        height: 150px;
+
+    }
+    .fikspozadina h1 {
+        visibility: hidden;
+    }
+}
+    
+/* lista knjiga */
+.container {
+    display: inline-block;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+    
+    
+    background-color: #ffffff93;
+    
+}
+
+.container h3{
+    width: 18rem;
+    height: 3rem;
+    margin-left: 3rem;
+   
+}
+.naziv{
+    word-break: keep-all;
+    
+    
+}
+
+
+.kartica{
+    display: inline-block;
+    background-color: #e9e9e99f;
+    margin: 1rem;
+
+
+/*     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 15px; */
+   
+}
+.img{
+    width: 20rem;
+    height: 30rem;
+
+    
+
+    margin-right: 5vh;
+}
+.kartica img{
+    margin: 2rem;
+    
+
+}
+
+.slika a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.img:hover{
+    opacity: 0.8;
+}
+.button{
+    background-color: rgb(41, 75, 36);
+    border: 2px gray;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 3%;
+    cursor: pointer;
+    font-family: sans-serif;
+    padding: 10px 20px;
+    
+}
+.checked{
+    color: gold;
+}
+@media screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
+    .kartica{
+        padding-top: 30px;
+    }
+}
+
+
+
+/* izmena korisnika */
+
+.container-korisnici{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-right: 40px;
+    justify-content: center;
+}
+.table-korisnici{
+    margin-top: 10px;
+    margin-left: 40px;
+    background-color: #ffffffe5;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-korisnici td, .table-korisnici th{
+    padding: 12px 15px;
+    border: 1px solid rgb(102, 16, 16);
+    text-align: center;
+    font-size: 16px;
+}
+.table-korisnici th{
+    background-color: rgb(31, 61, 19);
+    color: #ffffff;
+
+}
+.table-korisnici tbody tr:nth-child(even){
+    background-color: rgb(110, 131, 97);
+
+}
+@media(max-width: 600px){
+    .table-korisnici thead{
+        display: none;
+    }
+    .table-korisnici, .table-korisnici tbody, .table-korisnici tr, .table-korisnici td{
+        display: block;
+        width: 100%;
+    }
+    .table-korisnici tr{
+        margin-bottom: 15px;
+    }
+    .table-korisnici td{
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table-korisnici td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+/* izmena knjige */
+.container-product{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.izmeni {
+    color:black;
+    border: 2px rgb(173, 99, 99);
+    border-radius: 3%;
+    cursor: pointer;
+    font-family: sans-serif;
+    padding: 10px 20px;
+}
+.opis{
+    background-color: rgba(161, 192, 182, 0.863);
+    /* width:50%;
+    height: 100%; */
+    border-radius: 3%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 40rem;
+    
+    
+    
+}
+@media(max-width: 600px){
+    .container-product{
+        display: block;
+    }
+    .opis{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .img-izmena{
+        margin-top: 55px;
+    }
+
+  
+}
+.img-izmena{
+    width: 48vh;
+    border-radius: 3%;
+}
+.kratak-opis{
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.kratak-opis h3{
+    text-align: center;
+}
+#tekst {
+    width: 100%;
+}
+#short {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-left: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    
+}
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+#short {
+    align-items: center;
+}
+
+/* knjiga produkt solo, mala izmena u odnosu na ->izmenaknjige.css */
+
+.opis{
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 20px;
+    }
+.naslov{
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.autor{
+    font-size: 20px;
+}
+.button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.zbirno{
+  font-size: 15px;  
+    margin-top: 9px;
+}
+.cena{
+    font-weight: 700;
+    color: rgb(63, 47, 207);
+    margin-top: 4px;
+    margin-bottom: 6px;
+    
+}
+
+/* .proba td {
+    border: 1px solid black;
+    padding: 8px;
+}
+.proba {
+    background: rgb(133, 194, 118);
+    color:rgb(92, 0, 0);
+    padding: 10px;
+    font-weight: normal;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 20px;
+} */
+.proba tr:hover {background-color: #ddd;}
+.proba tr:nth-child(even){background-color: #51614d;}
+
+  /* korpa */
+  .korpa{
+    text-align: center;
+    margin-top:10px ;
+    background: rgba(255, 255, 255, 0.301);
+    width: 100%;
+    border-collapse: collapse;
+} 
+  .korpa tr:hover {background-color: #ddd;}
+
+  .korpa button {
+
+    color:rgb(0, 0, 0);
+    border-radius: 3%;
+    cursor: pointer;
+    font-family: sans-serif;
+    padding: 10px 20px;
+  }
+  .korpa th{
+    text-align: center;
+    background: rgb(10, 37, 3);
+    color:rgb(255, 255, 255);
+    font-weight: normal;
+  }
+  .korpa{
+    height: 400px;
+}
+.ukupno{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+.ukupno th{
+    text-align: center;
+    background: rgb(10, 37, 3);
+    color:rgb(255, 255, 255);
+    font-weight: normal;}
+.ukupno th{
+    padding: 12px 15px;
+    border: 1px solid rgb(102, 16, 16);
+    text-align: center;
+    font-size: 16px;
+}
+.ukupno td {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+button{ color:rgb(0, 0, 0);
+    border-radius: 3%;
+    cursor: pointer;
+    font-family: sans-serif;
+    padding: 10px 20px;}
+a:link{
+    text-decoration: none;
+    
+}
+
+/* css za korisnika test */
+
+
+.korisnik1{
+    display: inline-block;
+    
+    background-color: rgb(240, 230, 190);
+    padding: 30px;
+    height:40rem;
+    /* margin-left: 20rem;
+    margin-right: 20rem; */
+    
+
+    
+}
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.del{
+    background-color: rgb(112, 99, 112);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.linija{
+    text-align: center;
+}
+.buttonzz {
+    
+    background-color: rgb(207, 169, 207);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.rating { font-size: 0; }
+.rating span { font-size: 30px; }
+.rating span::before { content: "☆"; }
+.rating span.active::before {content: "★"; }
+.rating span:hover { cursor: pointer; }
+.rating span:hover {color: rgb(189, 174, 38);}
+
+/* #rating span.active {
+    color: orange;
+  }
+  
+#rating span {
+    font-size: 42px;
+    cursor: pointer;
+  } */
+.a{color: yellow;}

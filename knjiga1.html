@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="glavna.css">
+        
+        
+        
+        
+
+        
+
+    </head>
+  
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+          <h4>Knjizara Atos</h4>
+      </div>
+      <ul class="nav-links">
+          <li><a href="glavna.html">Knjige</a></li>
+          <li><a href="#" class onclick ="togglepopup()">Prijava</a></li>
+          <li><a href="#" class onclick ="togglepopup1()">Registracija</a></li>
+          <li><a href="izmena korisnika.html">Korisnici</a></li>
+          <li><a href="korpa.html">Korpa</a></li>
+      </ul>
+     
+  </nav>
+  <div class="sgn-popup" id="sgn-popup">
+    <div class="overlay1"></div>
+    <div class="sgn-content">
+      <div class="tekst">Registracija</div>
+      <div class="close-btn-sgn" onclick ="togglepopup1()">&times;</div>
+      <form action="https://knjizara-b9757-default-rtdb.firebaseio.com/korisnici.json" method="GET" id="sgnForm">
+              
+              <label>Ime:</label>
+              <input id="ime" type="text" pattern="[A-Za-z]+">
+              <label>Prezime:</label>
+              <input id="test" type="text" pattern="[A-Za-z]+">
+              <label>Adresa stanovanja:</label>
+              <input id="test" type="text" pattern="[A-Za-z]+">
+              <label>Telefon:</label>
+              <input id="test" type="tel" >
+              <label>Datum rodjenja:</label>
+              <input id="test" type="date" >
+              <label>Username:</label>
+              <input id="test" type="text" >
+              <label>Email:</label>
+              <input id="sgnEmail" type="email">
+              <label>Lozinka:</label>
+              <input id="sgnPassword" type="password">
+          
+          <div class="log-button">
+              <button type="submit">Registracija</button>
+          </div>
+          
+      </form>
+
+    </div>
+
+</div>
+<div class="popup" id="popup-1">
+    <div class= "overlay"></div>
+    <div class="content">
+        <div class="close-btn" onclick ="togglepopup()">&times;</div>
+        <form action="https://knjizara-b9757-default-rtdb.firebaseio.com/korisnici.json" method="GET" id="loginForm">
+            <label>Email</label>
+            <input id="txtEmail" type="email" name="email" autocomplete="off">
+            <label>Lozinka</label>
+            <input id="txtPassword" type="password"  autocomplete="off">
+        
+        
+            <button class="log-button" type="submit">login</button>
+        
+        
+        </form>
+    </div>
+
+</div>
+  <div class="fikspozadina">
+      <img src="logo.png"/>
+      <h1>KNJIZARA ATOS</h1>
+  </div>
+
+  <main class="container-product">
+    <div  id="slikadiv"></div>
+    
+    <div class="opis" id="opis"></div>
+      
+          
+      
+      
+  
+<script src="knjige.js"></script>
+<script src="sgn.js"></script>
+<script src="login.js"></script>
+<script src="login2.js"></script>
+
+
+</body>
+</html>
